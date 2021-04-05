@@ -5,13 +5,31 @@
   --mainYellow: rgb(249, 228, 148);
   --mainWhite: #fff;
   --mainBlack: #000;
+  --mainYellowForte: #fdc32b;
+  --mainMarrom: #372e29;
   --yellowTrans: rgba(249, 228, 148, 0.5);
   --mainGrey: rgb(238, 238, 238);
 }
 
+header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px double var(--mainYellowForte);
+}
+
+header img:hover {
+  border: 2px double var(--mainWhite);
+  transition: 1s;
+}
+
+.nav-info {
+  color: var(--mainYellowForte);
+}
+
 body {
   font-family: "Kaushan Script", cursive;
-  background: var(--mainWhite);
+  background: var(--mainMarrom);
   color: var(--mainBlack);
 }
 /* nav links */
@@ -20,33 +38,33 @@ body {
 }
 .toggler-icon {
   font-size: 2.5rem;
-  color: var(--mainPink);
+  color: var(--mainYellowForte);
 }
 .nav-link {
-  color: var(--mainPink);
+  color: var(--mainYellowForte);
   font-size: 1.5rem;
   transition: all 0.5s ease-in-out;
 }
 .nav-link:hover {
-  color: var(--mainBlack);
+  color: var(--mainWhite);
+  border: 2px double white;
 }
 /* end of nav links */
 /* info icons */
 .cart-info__icon {
-  color: var(--mainBlack);
+  color: var(--mainYellowForte);
   cursor: pointer;
 }
 
 .cart-info {
-  border: 0.1rem solid var(--mainBlack);
-  color: var(--mainBlack);
+  color: var(--mainYellowForte);
   border-radius: 0.25rem;
   padding: 0.4rem 0.6rem;
   cursor: pointer;
 }
 .cart-info:hover {
-  background: var(--mainPink);
-  border-color: var(--mainPink);
+  background: var(--mainMarrom);
+  border-color: var(--mainWhite);
   color: var(--mainWhite);
 }
 .cart-info:hover .cart-info__icon {
@@ -58,25 +76,31 @@ body {
 .max-height {
   min-height: calc(100vh - 76px);
   background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
-    url("../img/headerBcg.jpeg") center/cover fixed no-repeat;
+    url("../img/paodemel.jpg") center/cover fixed no-repeat;
   position: relative;
 }
+
 .banner {
   color: var(--mainWhite);
   margin-top: -4rem;
 }
+
 .banner-title {
-  color: var(--mainPink);
+  color: var(--mainBlack);
   font-size: 4rem;
+  border-right: 3px;
+  border-left: 3px;
 }
+
 .banner-link {
   font-size: 1.5rem;
   color: var(--mainBlack);
   border: 0.2rem solid var(--mainBlack);
 }
+
 .banner-link:hover {
   background: var(--mainBlack);
-  color: var(--mainPink);
+  color: var(--mainYellowForte);
 }
 /* endo of banner */
 /* cart  */
@@ -87,15 +111,17 @@ body {
   top: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(55,46,41, 0.97);
   width: 0;
   overflow: hidden;
 }
+
 .show-cart {
   width: 18rem;
   padding: 2rem 1.5rem;
   transform: rotateY(-360deg);
 }
+
 .cart-item {
   transition: all 2s ease-in-out;
 }
@@ -103,37 +129,44 @@ body {
 /* end of cart */
 /* cart item */
 .cart-item-remove {
-  color: var(--mainPink);
+  color: var(--mainBlack);
   transition: all 1s ease-in-out;
 }
+
 .cart-item-remove:hover {
   transform: scale(1.1);
-  color: var(--mainBlack);
+  color: var(--mainYellowForte);
 }
+
 #cart-item-price {
   font-size: 0.8rem;
 }
+
 /* cart item */
 /* cart buttons */
 .btn-pink {
   color: var(--mainPink) !important;
   border-color: var(--mainPink) !important;
 }
+
 .btn-black {
   color: var(--mainBlack) !important;
   border-color: var(--mainBlack) !important;
 }
+
 .btn-black:hover {
   color: var(--mainPink) !important;
   background: var(--mainBlack) !important;
 }
+
 .btn-pink:hover {
   background: var(--mainPink) !important;
   color: var(--mainBlack) !important;
 }
-/* end of cart buttons */
 
+/* end of cart buttons */
 /* about */
+
 .about-img__container {
   position: relative;
 }
@@ -145,10 +178,11 @@ body {
   left: -1.7rem;
   width: 100%;
   height: 100%;
-  outline: 0.5rem solid var(--mainYellow);
+  outline: 0.5rem solid var(--mainYellowForte);
   z-index: -1;
   transition: all 1s ease-in-out;
 }
+
 .about-img__container:hover:before {
   top: 0;
   left: 0;
@@ -160,17 +194,21 @@ body {
 .store {
   background: var(--mainGrey);
 }
+
 .img-container {
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
+
 .store-img {
   transition: all 1s ease-in-out;
 }
+
 .img-container:hover .store-img {
   transform: scale(1.2);
 }
+
 .store-item-icon {
   position: absolute;
   bottom: 0;
@@ -181,23 +219,26 @@ body {
   transition: all 1s ease-in-out;
   transform: translate(100%, 100%);
 }
+
 .img-container:hover .store-item-icon {
   transform: translate(0, 0);
 }
+
 .store-item-icon:hover {
   color: var(--mainWhite);
 }
+
 .store-item-value {
   color: --mainYellow;
 }
-/*end of  store items */
+
+/*end of store items */
 .search-box {
   background: var(--mainPink);
   color: var(--mainBlack);
 }
 
 /* ligthbox */
-
 .lightbox-container {
   position: fixed;
   top: 0;
@@ -208,6 +249,7 @@ body {
   background: rgba(0, 0, 0, 0.6) !important;
   display: none;
 }
+
 .show {
   display: block;
 }
@@ -215,17 +257,20 @@ body {
 .lightbox-holder {
   position: relative;
 }
+
 .lightbox-item {
   min-height: 80vh;
   background: url("../img/cake-1.jpeg") center/cover fixed no-repeat;
   border-radius: 0.3rem;
 }
+
 .lightbox-close {
   color: var(--mainPink);
   font-size: 3rem;
   transition: all 1s ease-in-out;
   cursor: pointer;
 }
+
 .lightbox-close:hover {
   color: var(--mainYellow);
 }
@@ -237,14 +282,17 @@ body {
   transition: all 1s linear;
   cursor: pointer;
 }
+
 .lightbox-control:hover {
   color: var(--mainYellow);
 }
+
 .btnLeft {
   top: 50%;
   left: 0;
   transform: translateX(-60%);
 }
+
 .btnRight {
   top: 50%;
   right: 0;
