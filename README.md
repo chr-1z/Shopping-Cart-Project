@@ -1,2 +1,2 @@
-# Shopping-Cart-Project
- 
+# js-cart-setup
+ADD ITEMS TO CART JAVASCRIPT PROJECT
