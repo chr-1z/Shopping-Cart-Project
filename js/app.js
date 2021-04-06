@@ -38,7 +38,10 @@
                 event.target.parentElement.parentElement.nextElementSibling.
                 children[0].children[1].textContent;
 
-                let finalPrice = price.slice(1).trim();
+                let finalPrice = price.slice(2).trim();
+
+                console.log(price);
+                console.log("Final price", finalPrice);
 
                 item.price = finalPrice;
 
@@ -78,7 +81,45 @@
                 cart.insertBefore(cartItem, total);
                 alert('item added to the cart');
 
+                showTotals();
+
+
+
             }
         });
     });
+
+    // show totals
+
+    function showTotals() {
+        const total = [];
+        const items = document.querySelectorAll('.cart-item-price');
+        
+        items.forEach(function(item) {
+            total.push(parseFloat(item.textContent));
+        });
+
+        //console.log(total);
+
+        const totalMoney = total.reduce(function(total, item) {
+            total += item;
+            return total;
+        }, 0);
+
+        const finalMoney = totalMoney.toFixed(2);
+
+        console.log(finalMoney);
+
+        document.getElementById('cart-total').textContent = finalMoney;
+        document.querySelector('.item-total').textContent = finalMoney;
+        document.getElementById('item-count').textContent = total.length;
+
+        // let i = 0;
+        // var soma = 0;
+        // for (i = 0; i < total.length; i++) {
+        //     soma += total[i];
+        // }
+
+        // console.log(soma);
+    }
 }) ();
